@@ -3,7 +3,11 @@
  * @returns {number} the length of the array
  */
 function getLength(numbers) {
-  // TODO
+  let length = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    length += 1;
+  }
+  return length;
 }
 
 /**
@@ -11,7 +15,11 @@ function getLength(numbers) {
  * @returns {number} the sum of the numbers
  */
 function getSum(numbers) {
-  // TODO
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 }
 
 /**
@@ -19,7 +27,9 @@ function getSum(numbers) {
  * @returns {number} the mean of the numbers
  */
 function getMean(numbers) {
-  // TODO
+  const sum = getSum(numbers);
+  const numItems = getLength(numbers);
+  return sum / numItems;
 }
 
 /**
@@ -27,7 +37,13 @@ function getMean(numbers) {
  * @returns {number} the smallest of the numbers
  */
 function getMin(numbers) {
-  // TODO
+  let min = Infinity;
+  for (const number of numbers) {
+    if (number < min) {
+      min = number;
+    }
+  }
+  return min;
 }
 
 /**
@@ -35,7 +51,13 @@ function getMin(numbers) {
  * @returns {number} the largest of the numbers
  */
 function getMax(numbers) {
-  // TODO
+  let max = Infinity;
+  for (const number of numbers) {
+    if (number > max) {
+      max = number;
+    }
+  }
+  return max;
 }
 
 /**
@@ -43,7 +65,7 @@ function getMax(numbers) {
  * @returns {number} the range of the numbers (max - min)
  */
 function getRange(numbers) {
-  // TODO
+  /return getMax(numbers) - getMin(numbers);
 }
 
 /**
